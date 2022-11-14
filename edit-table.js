@@ -1,7 +1,10 @@
+
+
 // (A) INITIALIZE - DOUBLE CLICK TO EDIT CELL
 window.addEventListener("DOMContentLoaded", () => {
-  for (let cell of document.querySelectorAll(".editable td")) {
+  for (let cell of document.querySelectorAll(".editable td.nickname")) {
     cell.ondblclick = () => editable.edit(cell);
+    
   }
 });
 
@@ -22,7 +25,7 @@ var editable = {
     // (C3) "MARK" CURRENT SELECTED CELL
     cell.classList.add("edit");
     editable.selected = cell;
-    editable.value = cell.innerHTML;
+    editable.value = cell.innerHTML = "";
 
     // (C4) PRESS ENTER/ESC OR CLICK OUTSIDE TO END EDIT
     window.addEventListener("click", editable.close);

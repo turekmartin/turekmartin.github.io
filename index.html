@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Editable Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
     <link rel="stylesheet" href="edit-table.css">
     <script defer src="edit-table.js"></script>
     <meta http-equiv='cache-control' content='no-cache'> 
@@ -9,6 +12,16 @@
     <meta http-equiv='pragma' content='no-cache'>
   </head>
   <body>
+  <script>
+
+
+
+
+</script>
+
+   <div>Double-click on a cell to edit.</div>
+   <div>Press button to change status</div>
+    <div>Press enter to commit, or escape to cancel.</div><br />
     <table class="editable">
       <!-- (A) HEADER -->
       <thead>
@@ -21,72 +34,85 @@
       <!-- (B) DATA -->
       <tbody>
         <tr>
-          <td>Job Doe</td>
-          <td><button class="button" role="button">Button 10</button></td>
+          <td class="nickname">double clik to add player</td>
+          <td><button id="player1" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Joe Doe</td>
-          <td>joe@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player2" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Joi Doe</td>
-          <td>joi@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player3" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Jon Doe</td>
-          <td>jon@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player4" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Joy Doe</td>
-          <td>joy@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player5" class="button-10 pending" role="button">Pending</button></td>
         </tr>
           <tr>
-          <td>Job Doe</td>
-          <td>job@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player6" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Joe Doe</td>
-          <td>joe@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player7" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Joi Doe</td>
-          <td>joi@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player8" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Jon Doe</td>
-          <td>jon@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player9" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Joy Doe</td>
-          <td>joy@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player10" class="button-10 pending" role="button">Pending</button></td>
         </tr>
           <tr>
-          <td>Job Doe</td>
-          <td>job@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player11" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Joe Doe</td>
-          <td>joe@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player12" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Joi Doe</td>
-          <td>joi@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player13" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Jon Doe</td>
-          <td>jon@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player14" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Joy Doe</td>
-          <td>joy@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player15" class="button-10 pending" role="button">Pending</button></td>
         </tr>
         <tr>
-          <td>Joy Doe</td>
-          <td>joy@doe.com</td>
+          <td class="nickname">double click to add player</td>
+          <td><button id="player16" class="button-10 pending" role="button">Pending</button></td>
         </tr>
       </tbody>
     </table>
-    <div>Double-click on a cell to edit.</div>
-    <div>Press enter to commit, or escape to cancel.</div>
+
+<script>
+var counter = 1;
+var button  = document.getElementById( "player" + counter);
+
+while ( button )
+{
+   button.addEventListener("click", function(){
+       $(this).addClass("checked");
+       $(this).html("Checked");
+   });
+
+   button  = document.getElementById( "player" + ( ++counter ));
+}
+</script>
   </body>
 </html>
