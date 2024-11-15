@@ -1,0 +1,80 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fef9e7;
+  color: #333;
+}
+
+header {
+  background-color: #82e0aa;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.dinosaurs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 900px;
+}
+
+ul#dinosaur-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+ul#dinosaur-list li {
+  background-color: #d5f5e3;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+ul#dinosaur-list li:hover {
+  background-color: #abebc6;
+}
+
+#dinosaur-details {
+  flex: 2;
+  background-color: #fef5e7;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#dinosaur-details h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+
+footer {
+  background-color: #82e0aa;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}

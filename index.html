@@ -1,109 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Editable Table</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="edit-table.css">
-    <script defer src="edit-table.js"></script>
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
-  </head>
-  <body>
-   <div>Double-click on a cell to rghrthreth.</div>
-   <div>Press button to change status</div>
-    <div>Press enter to commit, or escape to cancel.</div><br />
-    <table class="editable">
-      <!-- (A) HEADER -->
-      <thead>
-        <tr>
-          <th>Nick</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-
-      <!-- (B) DATA -->
-      <tbody>
-        <tr>
-          <td class="nickname">double clik to add player</td>
-          <td><button id="player1" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player2" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player3" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player4" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player5" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-          <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player6" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player7" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player8" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player9" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player10" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-          <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player11" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player12" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player13" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player14" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player15" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-        <tr>
-          <td class="nickname">double click to add player</td>
-          <td><button id="player16" class="button-10 pending" role="button">Pending</button></td>
-        </tr>
-      </tbody>
-    </table>
-
-<script>
-var counter = 1;
-var button  = document.getElementById( "player" + counter);
-
-while ( button )
-{
-   button.addEventListener("click", function(){
-       $(this).addClass("checked");
-       $(this).html("Checked");
-   });
-
-   button  = document.getElementById( "player" + ( ++counter ));
-}
-</script>
-  </body>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encyklopedie dinosaurů</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🦖 Encyklopedie roztomilých dinosaurů</h1>
+  </header>
+  <main>
+    <section class="dinosaurs">
+      <ul id="dinosaur-list"></ul>
+      <div id="dinosaur-details">
+        <h2>Vyberte si dinosaura!</h2>
+        <p>Klikněte na jméno dinosaura pro zobrazení podrobností.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Encyklopedie vytvořená s láskou. 🦕</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
 </html>
