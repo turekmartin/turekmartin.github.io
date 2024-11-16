@@ -14,17 +14,51 @@
 
   <main>
     <section class="todo-list">
-      <ul id="task-list">
-        <li data-task="sprcha">🚿 Sprcha</li>
-        <li data-task="snídaně">🍽️ Snídaně</li>
-        <li data-task="úklid">🧹 Úklid</li>
-        <li data-task="nákup">🛒 Nákup</li>
-        <li data-task="vyzvednout_mamu">👩‍👧 Vyzvednout mámu</li>
-      </ul>
+      <table id="task-table">
+        <thead>
+          <tr>
+            <th>Úkol</th>
+            <th>Splněno</th>
+            <th>Akce</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-task="sprcha">
+            <td>🚿 Sprcha</td>
+            <td><input type="checkbox" class="task-checkbox"></td>
+            <td><button class="modal-button" disabled>Zobrazit dinosaura</button></td>
+          </tr>
+          <tr data-task="snídaně">
+            <td>🍽️ Snídaně</td>
+            <td><input type="checkbox" class="task-checkbox"></td>
+            <td><button class="modal-button" disabled>Zobrazit dinosaura</button></td>
+          </tr>
+          <tr data-task="úklid">
+            <td>🧹 Úklid</td>
+            <td><input type="checkbox" class="task-checkbox"></td>
+            <td><button class="modal-button" disabled>Zobrazit dinosaura</button></td>
+          </tr>
+          <tr data-task="nákup">
+            <td>🛒 Nákup</td>
+            <td><input type="checkbox" class="task-checkbox"></td>
+            <td><button class="modal-button" disabled>Zobrazit dinosaura</button></td>
+          </tr>
+          <tr data-task="vyzvednout_mamu">
+            <td>👩‍👧 Vyzvednout mámu</td>
+            <td><input type="checkbox" class="task-checkbox"></td>
+            <td><button class="modal-button" disabled>Zobrazit dinosaura</button></td>
+          </tr>
+        </tbody>
+      </table>
 
-      <div id="dinosaur-task">
-        <h2>Splň úkol a objev dinosaura!</h2>
-        <p>Pro začátek klikni na nějaký úkol.</p>
+      <!-- Modal -->
+      <div id="dinosaur-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="modal-title"></h2>
+          <img id="modal-image" src="" alt="" style="max-width: 100%; border-radius: 10px;">
+          <p id="modal-description"></p>
+        </div>
       </div>
     </section>
   </main>

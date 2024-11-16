@@ -27,22 +27,42 @@ const tasks = {
   }
 };
 
-// Vložení úkolů do seznamu
-const taskList = document.getElementById('task-list');
-const dinosaurTask = document.getElementById('dinosaur-task');
+// Funkce pro zobrazení modalu
+const modal = document.getElementById("dinosaur-modal");
+const closeBtn = document.querySelector(".close-btn");
 
-Object.keys(tasks).forEach(task => {
-  const taskItem = document.createElement('li');
-  taskItem.textContent = tasks[task].dinosaur;
-  taskItem.onclick = () => completeTask(task);
-  taskList.appendChild(taskItem);
-});
-
-function completeTask(task) {
-  const dino = tasks[task];
-  dinosaurTask.innerHTML = `
-    <h2>${dino.dinosaur}</h2>
-    <img src="${dino.image}" alt="${dino.dinosaur}" style="max-width: 100%; border-radius: 10px;">
-    <p>${dino.description}</p>
-  `;
+function openModal(dino) {
+  document.getElementById("modal-title").textContent = dino.dinosaur;
+  document.getElementById("modal-image").src = dino.image;
+  document.getElementById("modal-description").textContent = dino.description;
+  modal.style.display = "block";
 }
+
+// Zavření modalu
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Funkce pro aktivaci zobrazení modalu u splněného úkolu
+const taskCheckboxes = document.querySelectorAll(".task-checkbox");
+
+taskCheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", (e) => {
+    const row = e.target.closest("tr");
+    const task = row.getAttribute("data-task");
+    const button = row.querySelector(".modal-button");
+
+    if (e.target.checked) {
+      button.disabled = false;
+      button.addEventListener("click", () => openModal(tasks[task]));
+    } else {
+      button.disabled = true;
+    }
+  });
+});
