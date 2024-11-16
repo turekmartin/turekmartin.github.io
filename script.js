@@ -49,20 +49,22 @@ window.onclick = function(event) {
   }
 }
 
-// Funkce pro aktivaci zobrazení modalu u splněného úkolu
-const taskCheckboxes = document.querySelectorAll(".task-checkbox");
+// Funkce pro označení úkolu jako splněného
+const taskRows = document.querySelectorAll('tr[data-task]');
+taskRows.forEach((row) => {
+  const statusCell = row.querySelector('.task-status');
+  const lockIcon = row.querySelector('.lock-icon');
 
-taskCheckboxes.forEach((checkbox) => {
-  checkbox.addEventListener("change", (e) => {
-    const row = e.target.closest("tr");
-    const task = row.getAttribute("data-task");
-    const button = row.querySelector(".modal-button");
+  statusCell.addEventListener('click', () => {
+    // Označení úkolu jako splněného
+    statusCell.textContent = '✔️ Splněno';
+    statusCell.classList.add('completed');
+    
+    // Změna zámku na odemknutý
+    lockIcon.textContent = '🔓';
+    lockIcon.classList.add('completed-icon');
 
-    if (e.target.checked) {
-      button.disabled = false;
-      button.addEventListener("click", () => openModal(tasks[task]));
-    } else {
-      button.disabled = true;
-    }
+    // Aktivace tlačítka pro zobrazení modalu
+    lockIcon.addEventListener('click', () => openModal(tasks[row.dataset.task]));
   });
 });
