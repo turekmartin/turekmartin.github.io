@@ -3,25 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Encyklopedie dinosaurů</title>
+  <title>TODO List - Dinosauři</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>🦖 Encyklopedie roztomilých dinosaurů</h1>
+    <h1>🦖 Dino TODO List</h1>
+    <p>Splň úkol a objev dinosaury!</p>
   </header>
+
   <main>
-    <section class="dinosaurs">
-      <ul id="dinosaur-list"></ul>
-      <div id="dinosaur-details">
-        <h2>Vyberte si dinosaura!</h2>
-        <p>Klikněte na jméno dinosaura pro zobrazení podrobností.</p>
+    <section class="todo-list">
+      <ul id="task-list">
+        <li data-task="sprcha">🚿 Sprcha</li>
+        <li data-task="snídaně">🍽️ Snídaně</li>
+        <li data-task="úklid">🧹 Úklid</li>
+        <li data-task="nákup">🛒 Nákup</li>
+        <li data-task="vyzvednout_mamu">👩‍👧 Vyzvednout mámu</li>
+      </ul>
+
+      <div id="dinosaur-task">
+        <h2>Splň úkol a objev dinosaura!</h2>
+        <p>Pro začátek klikni na nějaký úkol.</p>
       </div>
     </section>
   </main>
+
   <footer>
-    <p>Encyklopedie vytvořená s láskou k 🦕</p>
+    <p>Vytvořeno s láskou a dinosaury. 🦕</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
